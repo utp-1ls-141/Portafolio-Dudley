@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="./statics/js/app.js"></script>
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+ 
+    <title>Laboratorio</title>
+</head>
+        
+        <body>
+            
+            <!-- As a link -->
+        <nav class="navbar navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Grupo #1</a>
+        </nav>
+        
+        
+        <center> <h1>  Asignacion #1 </h1></center>
+        
+            <div class="container">
+                <div class="row">
+            <div class="col-sm-2">         
+            </div>   
+                
+                
+          <div class="col-sm-8">
+         <fieldset>     
+          <!-- <form class="form-signin">       -->
+            <div class="card-body">Ingrese las Palabras que desea concatenar</div>
+                <label >Palabra 1</label>
+                <input type="text" id="input1" class="form-control" placeholder="Palabra 1" required="" autofocus="">
+                <br>
+                <label >Palabra 2</label>
+                
+                <input type="text" id="input2" class="form-control" placeholder="Palabra 2" required="">
+                <br>
+               <center> <button style="text-align: right" class="btn btn-success" id="success"   data-toggle="modal" data-target="#myModal" onclick="concatenarP();" >Comprobar</button></center>
+                
+               
+ 
+                            
+            
+             <!-- </form> -->
+              </fieldset>
+                <br>
+
+              <fieldset>     
+                  <!-- <form class="form-signin">       -->
+                    <div>
+                    <div class="card-body">Ingrese un Numero para Generar una Matriz Cuadrada</div>
+                        <label >Numero "n"</label>
+                        <input type="text" id="inputn" class="form-control" placeholder="Numero 1" required="" autofocus="">
+                        <br>
+                       <center> <button style="text-align: right" class="btn btn-success" id="success"  data-toggle="modal" data-target="#myModal" onclick="matrizG();" >Comprobar</button></center>
+                      </div>
+
+                     <!-- </form> -->
+              </fieldset>
+
+                              <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              
+              <h4 style="color: darkblue" class="modal-title">Resultado</h4>
+            </div>
+            <div class="modal-body">
+              <p style="color: red; font-weight: bold"  id="error"></p>
+             <center> <p style="color: green; font-weight: bold"  id="successm"></p></center>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+  </div>
+            </div>
+              
+              
+              
+         <div class="col-sm-2">         
+         </div>
+        
+             
+            </div>
+            </div> <!-- /container -->
+            
+        
+        
+        
+           
+          <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="./vendor/jquery/jquery-3.3.1.min.js"></script>
+            <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+        
+        </body></html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./vendor/jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+ 
+    <title>Laboratorio</title>
+</head>
+        
+        <body>
+            
+            <!-- As a link -->
+        <nav class="navbar navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Grupo #1</a>
+        </nav>
+        
+        
+        <center> <h1>  Comprobador de Isomorfismo Online </h1></center>
+        
+            <div class="container">
+                <div class="row">
+            <div class="col-sm-2">         
+            </div>   
+                
+                
+          <div class="col-sm-8">
+         <fieldset>     
+          <!-- <form class="form-signin">       -->
+            <div class="card-body">Problema #2</div>
+                <label >Palabra 1</label>
+                <input type="text" id="input1" class="form-control" placeholder="Palabra 1" required="" autofocus="">
+                <br>
+                <label >Palabra 2</label>
+                
+                <input type="text" id="input2" class="form-control" placeholder="Palabra 2" required="">
+                <br>
+                <button style="text-align: right" class="btn btn-success" id="success"  data-toggle="modal" data-target="#myModal" >Comprobar</button>
+                
+                <script>
+                            $(document).ready(function(){
+                            $("#success").click(function(){
+
+str1 = document.getElementById("input1").value;
+str2 = document.getElementById("input2").value;
+
+var len1 = str1.length;
+var bool = true;
+    
+if (str1==="" || str2==="" ) {
+      $("#error").html("Falta un Campo por completar");
+        $("#successm").html("");
+        $('#myModal').modal("show");
+}
+else{    
+
+if (len1 != str2.length) {
+  $("#error").html("Las palabras deben ser de igual longitud");
+        bool=false;
+    }
+    else{
+
+   
+   
+    
+    var chMap = {};
+    
+    for (var i = 0; i < len1; i++) {
+    	
+        if (!chMap[str1[i]]) {   	
+            chMap[str1[i]] = str2[i];
+     
+        } else if (chMap[str1[i]] !== str2[i]) {
+        bool = false;
+        }
+        
+    }
+    
+    if (bool == false) {
+        $("#error").html("La Palabra no es Isomorfica");
+        $("#successm").html("");
+        $('#myModal').modal("show");
+    }
+
+    else if (bool == true){
+        $("#successm").html("La Palabra es Isomorfica");
+        $("#error").html("");
+        $('#myModal').modal("show"); 
+    }
+  }
+}
+
+                  });
+                  });
+                  </script> 
+               
+ 
+                            
+            
+             <!-- </form> -->
+              </fieldset>
+
+                              <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              
+              <h4 style="color: darkblue" class="modal-title">Resultado</h4>
+            </div>
+            <div class="modal-body">
+              <p style="color: red; font-weight: bold"  id="error"></p>
+              <p style="color: green; font-weight: bold"  id="successm"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+  </div>
+            </div>
+              
+              
+              
+         <div class="col-sm-2">         
+         </div>
+        
+             
+            </div>
+            </div> <!-- /container -->
+            
+        
+        
+        
+           
+          <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="./vendor/jquery/jquery-3.3.1.min.js"></script>
+            <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+        
+        </body></html>

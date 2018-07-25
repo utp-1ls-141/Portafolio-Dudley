@@ -1,0 +1,79 @@
+<html lang="en"><head>
+<head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <title>Signin Template for Bootstrap</title>
+         <link rel="stylesheet" href="css/bootstrap.css">
+     
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<body>
+    
+    <!-- As a link -->
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Grupo #1</a>
+</nav>
+
+
+<center> <h1>  Proyecto de Recuperación </h1></center>
+
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-2">         
+    </div>   
+        
+        
+  <div class="col-sm-8">
+ <fieldset>     
+  <form class="form-signin">      
+    <div class="card-body">Problema #1</div>
+        <label >Usuario</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+        <br>
+        <label >Contraseña</label>
+        
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <br>
+        <button style="align: right" class="btn btn-success" id="success" >Iniciar</button>
+        <script>
+$(document).ready(function(){
+    $("#success").click(function(){
+        if(document.getElementById("inputEmail").value == ""){ 
+            alert("Error email vacio"  + document.getElementById("inputEmail").value);
+        }
+        else if (document.getElementById("inputPassword").value == ""){ 
+            alert("Error contraseña vacia");
+        }
+        else{
+        alert("Exito Bienvenido "  + document.getElementById("inputEmail").value);}
+    });
+});
+</script>
+    
+     </form>
+      </fieldset>
+      </div>
+      
+      
+ <div class="col-sm-2">         
+    </div>
+
+     
+        </div>
+    </div> <!-- /container -->
+    
+
+
+
+   
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body></html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <head>
+            <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                 <title>Signin Template for Bootstrap</title>
+                 <link rel="stylesheet" href="css/bootstrap.css">
+             
+        <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+        <center> <h1>  Comprobador de Isomorfismo Online </h1></center>
+        
+        <div class="container">
+            <div class="row">
+        <div class="col-sm-2">         
+        </div>   
+            
+            
+      <div class="col-sm-8">
+     <fieldset>     
+      <!-- <form class="form-signin">       -->
+        <div class="card-body">Problema #2</div>
+            <label >Usuario</label>
+            <input type="text" id="input1" class="form-control" placeholder="Palabra 1" required="" autofocus="">
+            <br>
+            <label >Contraseña</label>
+            
+            <input type="text" id="input2" class="form-control" placeholder="Palabra 2" required="">
+            <br>
+            <button style="text-align: right" class="btn btn-success" id="success"  data-toggle="modal" data-target="#myModal" >Comprobar</button>
+            
+            <script>
+                    $(document).ready(function(){
+                        $("#success").click(function(){
+
+str1 = document.getElementById("input1").value;
+str2 = document.getElementById("input2").value;
+
+var len1 = str1.length;
+var bool = true;
+
+if (len1 != str2.length) {
+    bool=false;
+}
+
+var chMap = {};
+
+for (var i = 0; i < len1; i++) {
+    
+    if (!chMap[str1[i]]) {   	
+        chMap[str1[i]] = str2[i];
+ 
+    } else if (chMap[str1[i]] !== str2[i]) {
+    bool = false;
+    }
+    
+}
+
+if (bool == false) {
+    $("#error").html("La Palabra no es Isomorfica");
+    $("#successm").html("");
+  $('#myModal').modal("show");
+}
+
+else if (bool == true){
+    $("#successm").html("La Palabra es Isomorfica");
+    $("#error").html("");
+  $('#myModal').modal("show"); 
+}
+
+                        });
+                    });
+                    </script> 
+           
+
+                        
+        
+         <!-- </form> -->
+          </fieldset>
+
+                          <!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 style="color: darkblue" class="modal-title">Resultado</h4>
+        </div>
+        <div class="modal-body">
+          <p style="color: red; font-weight: bold"  id="error"></p>
+          <p style="color: green; font-weight: bold"  id="successm"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+          </div>
+          
+          
+          
+     <div class="col-sm-2">         
+        </div>
+    
+         
+            </div>
+        </div> <!-- /container -->
+        
+
+       
+      <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
